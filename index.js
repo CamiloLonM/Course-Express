@@ -3,7 +3,7 @@ const express = require('express');
 const hbs = require('hbs');         // Reenderizar vistas sencillas
 
 const app = express();
-const port = process.env.PORT ;     // Puerto deon se desplegue
+const port = process.env.PORT ;     // Puerto donde se desplegue
 
 
 // Handlebars
@@ -12,7 +12,7 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials', );
 
 //  Path Servir Contenido Estático
-app.use(express.static('public') );            //  ( nombre de la carpeta) 
+app.use(express.static('public') );            //  ( 'nombre de la carpeta' ) 
 
 
 // app.get('/', function (req, res) {         // ('/' ) Aca defino la Ruta / se puede con arrow o sin el 
